@@ -1,0 +1,8 @@
+version: "1"
+services:
+  dart:
+    build:
+      context: .
+      dockerfile: ./docker/dart/Dockerfile
+    volumes:
+      - ./:/flybuben:rw
