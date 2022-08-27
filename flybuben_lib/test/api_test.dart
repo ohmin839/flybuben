@@ -113,4 +113,40 @@ void main() {
     testToAybuben('\r\n', '\r\n');
     testToAybuben('あ', 'あ');
   });
+
+  group('A group of tests for toHayerenWords function', () {
+    void testToHayerenWords(String input, List<String> expected) {
+      test("$input -> $expected", () {
+        expect(toHayerenWords(input), expected);
+      });
+    }
+
+    testToHayerenWords('', []);
+    testToHayerenWords('Բարև Ձեզ։', ['Բարև', 'Ձեզ']);
+  });
+
+  group('A group of tests for toHayerenWordSet function', () {
+    void testToHayerenWordSet(String input, Set<String> expected) {
+      test("$input -> $expected", () {
+        expect(toHayerenWordSet(input), expected);
+      });
+    }
+
+    testToHayerenWordSet('', <String>{});
+    testToHayerenWordSet('Բարև Ձեզ։', {'Բարև', 'Ձեզ'});
+    testToHayerenWordSet('Բարև Ձեզ, Բարև ձեզ։', {'Բարև', 'Ձեզ', 'ձեզ'});
+  });
+
+  group('A group of tests for toHayerenWordDict function', () {
+    void testToHayerenWordDict(String input, Map<String, int> expected) {
+      test("$input -> $expected", () {
+        expect(toHayerenWordDict(input), expected);
+      });
+    }
+
+    testToHayerenWordDict('', <String, int>{});
+    testToHayerenWordDict('Բարև Ձեզ։', <String, int>{'Բարև': 1, 'Ձեզ': 1});
+    testToHayerenWordDict('Բարև Ձեզ, Բարև ձեզ։', <String, int>{'Բարև': 2, 'Ձեզ': 1, 'ձեզ': 1});
+  });
+
 }

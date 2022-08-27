@@ -387,7 +387,8 @@ Parser<String> _buildParser() {
       .flatten()
       .map((value) => value);
 
-  final Parser<String> anyChar = any().map((value) => value);
+  final Parser<String> anyChar
+    = any().map((value) => value);
 
   final Parser<String> lttr = 
     ( largeA
