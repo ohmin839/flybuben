@@ -471,7 +471,7 @@ class ConversionParser extends Parser<String> {
 
   @override
   Parser<String> copy() {
-    return _parser;
+    return this;
   }
 
   @override
