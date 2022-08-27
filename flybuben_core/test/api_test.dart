@@ -1,4 +1,4 @@
-import 'package:flybuben_lib/api.dart';
+import 'package:flybuben_core/api.dart';
 import 'package:test/test.dart';
 
 void main() {

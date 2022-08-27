@@ -1,6 +1,6 @@
 /// Support for doing something awesome.
 ///
 /// More dartdocs go here.
-library flybuben_lib;
+library flybuben_core;
 
 export 'src/api.dart';

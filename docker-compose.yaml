@@ -1,8 +1,8 @@
 version: "1"
 services:
-  dart:
+  core:
     build:
       context: .
-      dockerfile: ./docker/dart/Dockerfile
+      dockerfile: ./docker/core/Dockerfile
     volumes:
-      - ./:/flybuben:rw
+      - ./flybuben_core:/flybuben_core:rw
