@@ -1,8 +1,9 @@
-version: "1"
+version: "3"
 services:
   core:
     build:
       context: .
       dockerfile: ./docker/core/Dockerfile
+    tty: true
     volumes:
       - ./flybuben_core:/flybuben_core:rw
