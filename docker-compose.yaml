@@ -7,3 +7,13 @@ services:
     tty: true
     volumes:
       - ./flybuben_core:/flybuben_core:rw
+  rest:
+    build:
+      context: .
+      dockerfile: ./docker/rest/Dockerfile
+    tty: true
+    volumes:
+      - ./flybuben_core:/flybuben_core:rw
+      - ./flybuben_rest:/flybuben_rest:rw
+    ports:
+      - 8080:8080

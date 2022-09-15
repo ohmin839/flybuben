@@ -7,7 +7,6 @@ RUN groupadd -g $GID $USERNAME && \
     useradd -m -s /bin/bash -u $UID -g $GID $USERNAME
 
 EXPOSE 8080
-CMD dart run :server
 
 USER $USERNAME
-WORKDIR /flybuben_core
+WORKDIR /flybuben_rest
