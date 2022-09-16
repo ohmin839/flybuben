@@ -4,5 +4,5 @@ This is a work on progress.
 
 ## Components
 - [`flybuben_core`](./flybuben_core/README.md)
+- [`flybuben_app`](./flybuben_app/README.md)
 - [`flybuben_rest`](./flybuben_rest/README.md)
-- 
